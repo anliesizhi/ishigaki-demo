@@ -11,123 +11,121 @@
         <p id="modoru"><a href="index.html">←</a></p>
         <h1>石垣予備診断入力</h1>
 
-        <form>
-            <label>地盤について</label><br>
-                <ul>
-                    <li><input type="radio" name = "q1" data-score="0"> 硬い地盤（Ⅰ種地盤相当）</li>
-                    <li><input type="radio" name = "q1" data-score="1"> 普通の地盤（Ⅱ種地盤相当）</li>
-                    <li><input type="radio" name = "q1" data-score="2"> 軟弱な地盤（Ⅲ種地盤相当）</li>
-                    <li><input type="radio" name = "q1" data-score="1"> 不明</li>
-                 </ul><br>
-                 <label>石垣の形状について</label><br>
-                    <label>   石垣タイプ</label><br>
-                    <ul><li><input type="radio" name = q2 data-score="0"> 非石塁（栗石層＋地山）</li>
-                        <li><input type="radio" name = q2 data-score="1"> 非石塁（栗石層＋盛土）</li>
-                        <li><input type="radio" name = q2 data-score="1"> 半石塁（栗石層＋地山）</li>
-                        <li><input type="radio" name = q2 data-score="2"> 半石塁（栗石層＋盛土）</li>
-                        <li><input type="radio" name = q2 data-score="3"> 半石塁突出形（突出しているもの）</li>
-                        <li><input type="radio" name = q2 data-score="2"> 石塁（栗石＋盛土）</li>
-                        <li><input type="radio" name = q2 data-score="3"> 石塁（栗石のみ）</li>
-                        <li><input type="radio" name = q2 data-score="3"> 栗石なし、盛土のみ</li>
-                        <li><input type="radio" name = q2 data-score="3"> 不明</li>
-                    </ul><br>
-                <label>石垣の勾配</label>
-                <ul>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ２ｍ未満 かつ勾配８５°以上</li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ２ｍ未満 かつ勾配８５°以下</li>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ２ｍ以上４ｍ未満 かつ勾配８５°以下</li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ２ｍ以上４ｍ未満 かつ勾配８０°以下</li>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ４ｍ以上６ｍ未満 かつ勾配８５°以下</li>
-                        <li><input type="radio" name = q3 data-score="1"> 高さ４ｍ以上６ｍ未満 かつ勾配７３°以下 </li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ４ｍ以上６ｍ未満 かつ勾配７０°以下</li>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ６ｍ以上１０ｍ未満 かつ勾配８０°以下 </li>
-                        <li><input type="radio" name = q3 data-score="1"> 高さ６ｍ以上１０ｍ未満 かつ勾配７０°以下</li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ６ｍ以上１０ｍ未満 かつ勾配６５°以下</li>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ１０ｍ以上１６ｍ未満 かつ勾配７５°以下</li>
-                        <li><input type="radio" name = q3 data-score="1"> 高さ１０ｍ以上１６ｍ未満 かつ勾配７０°以下</li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ１０ｍ以上１６ｍ未満 かつ勾配６５°以下 </li>
-                        <li><input type="radio" name = q3 data-score="2"> 高さ１６ｍ以上 かつ勾配７５°以下</li>
-                        <li><input type="radio" name = q3 data-score="1"> 高さ１６ｍ以上 かつ勾配６５°以下</li>
-                        <li><input type="radio" name = q3 data-score="0"> 高さ１６ｍ以上 かつ勾配６０°以下 </li>
-                        <li><input type="radio" name = q3 data-score="3"> 上記以外</li>
-                </ul><br>
-                <label>過去の履歴</label><br>
-                    <label>被災・修復履歴</label><br>
-                    <ul><li><input type="radio" name = q4 data-score="0"> 崩れたり変状した記録はない。</li>
-                        <li><input type="radio" name = q4 data-score="3"> ２回以上崩れた記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="2"> １回崩れた記録・痕跡ある。</li>
-                        <li><input type="radio" name = q4 data-score="2"> ２回以上変状した記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="1"> １回変状した記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="3"> 程度は不明だが、２回以上被災した記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="2"> 程度は不明だが、１回被災した記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="3"> ２回以上積み直しを伴う修理を行った記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="2"> １回積み直しを伴う修理を行った記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="1"> 積み直しを伴わない修理を行った記録・痕跡がある。</li>
-                        <li><input type="radio" name = q4 data-score="2"> 不明。</li>
-                    </ul><br>
-                    <label>修理の方法</label><br>
-                    <ul><li><input type="radio" name = q5 data-score="0"> 修理にあたり特段の対策はしていない。</li>
-                        <li><input type="radio" name = q5 data-score="-1"> 修理にあたり原因の分析と伝統工法の範囲で改善が図られた。</li>
-                        <li><input type="radio" name = q5 data-score="-2"> 修理にあたり原因の分析と具体的な改良工法がとられた（土壌改良、栗石の粒度改良など、を除く）。</li>
-                        <li><input type="radio" name = q5 data-score="-3"> 修理にあたり原因の分析と構造解析を行い、必要性能を概ね満たす改良、補強を行った。</li>
-                        <li><input type="radio" name = q5 data-score="-1"> 修理にあたり在来仕様にこだわらず現代的な手法を用いて対策がなされた。 </li>
-                        <li><input type="radio" name = q5 data-score="0"> 不明。</li>
-                    </ul><br>
-                    <label>築石の変状</label><br>
-                    <label>緩み、築石の目地の開き</label><br>
-                    <ul>
-                        <li><input type="radio" name = q6 data-score="0"> 見られない。</li>
-                        <li><input type="radio" name = q6 data-score="1"> 若干の緩み、築石の目地の開きがある。</li>
-                        <li><input type="radio" name = q6 data-score="2"> 緩み、築石の目地の開きが随所に見られる。</li>
-                        <li><input type="radio" name = q6 data-score="4"> 緩み、築石の目地の開きが著しい。</li>
-                    </ul><br>
-                    
-                    <label>孕み</label><br>
-                    <ul>
-                        <li><input type="radio" name = q7 data-score="0"> 見られない。</li>
-                        <li><input type="radio" name = q7 data-score="1"> わずかに孕みがある。</li>
-                        <li><input type="radio" name = q7 data-score="2"> 孕みがある（孕みだし指数６未満）。 </li>
-                        <li><input type="radio" name = q7 data-score="4"> 局所的な孕みが著しい （孕みだし指数６以上）。</li>
-                        <li><input type="radio" name = q7 data-score="4"> 全体的な孕みが見られる。</li>
-                    </ul><br>
-                    <label>割れ、抜け落ち、崩れ</label>
-                    <ul>
-                        <li><input type="radio" name = q8 data-score="0"> 見られない。</li>
-                        <li><input type="radio" name = q8 data-score="1"> 築石、角石の割れ、間詰石の抜け落ちが若干見られる。</li>
-                        <li><input type="radio" name = q8 data-score="2"> 築石、角石の割れ、間詰石の抜け落ちが随所で見られる。</li>
-                        <li><input type="radio" name = q8 data-score="4"> 築石、角石の割れ、間詰石の抜け落ち、築石の崩れが著しい。</li>
-                    </ul><br>
-                    <label>周辺の変状</label><br>
-                    <label>天端または栗石部の沈下、地割れ </label>
-                    <ul>
-                        <li><input type="radio" name = q9 data-score="0"> 見られない。</li>
-                        <li><input type="radio" name = q9 data-score="1"> 天端または栗石部の沈下が見られる。 </li>
-                        <li><input type="radio" name = q9 data-score="3"> 天端周辺に地割れがある、地割れが入ったことがある。</li>
-                    </ul><br>
-                    <label>基礎部の変状</label>
-                    <ul>
-                        <li><input type="radio" name = q10 data-score="0"> 見られない。</li>
-                        <li><input type="radio" name = q10 data-score="3"> 基礎部の変状が見られる。</li>
-                    </ul><br>
-                    <label>変状の進行状況</label>
-                    <ul>
-                        <li><input type="radio" name = q11 data-score="0"> 変状がほぼない</li>
-                        <li><input type="radio" name = q11 data-score="0"> 変状があり観測を行っており、変化が無い。</li>
-                        <li><input type="radio" name = q11 data-score="1"> 変状があり観測を行っていないが、目視で大きな変化が無い。 </li>
-                        <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っており、変状が進行している。 </li>
-                        <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っていないが、明らかに変状が進行している。 </li>
-                    </ul><br>
-                    <label>湧水</label>
-                    <ul>
-                        <li><input type="radio" name = q12 data-score="0"> 表面が乾いている。</li>
-                        <li><input type="radio" name = q12 data-score="1"> 水がしみ出す/草が生えている。</li>
-                        <li><input type="radio" name = q12 data-score="3"> 水が流れ出している。</li>
-                    </ul><br>
+        <label>地盤について</label><br>
+        <ul>
+            <li><input type="radio" name = "q1" data-score="0"> 硬い地盤（Ⅰ種地盤相当）</li>
+            <li><input type="radio" name = "q1" data-score="1"> 普通の地盤（Ⅱ種地盤相当）</li>
+            <li><input type="radio" name = "q1" data-score="2"> 軟弱な地盤（Ⅲ種地盤相当）</li>
+            <li><input type="radio" name = "q1" data-score="1"> 不明</li>
+        </ul><br>
+        <label>石垣の形状について</label><br>
+        <label>   石垣タイプ</label><br>
+        <ul><li><input type="radio" name = q2 data-score="0"> 非石塁（栗石層＋地山）</li>
+            <li><input type="radio" name = q2 data-score="1"> 非石塁（栗石層＋盛土）</li>
+            <li><input type="radio" name = q2 data-score="1"> 半石塁（栗石層＋地山）</li>
+            <li><input type="radio" name = q2 data-score="2"> 半石塁（栗石層＋盛土）</li>
+            <li><input type="radio" name = q2 data-score="3"> 半石塁突出形（突出しているもの）</li>
+            <li><input type="radio" name = q2 data-score="2"> 石塁（栗石＋盛土）</li>
+            <li><input type="radio" name = q2 data-score="3"> 石塁（栗石のみ）</li>
+            <li><input type="radio" name = q2 data-score="3"> 栗石なし、盛土のみ</li>
+            <li><input type="radio" name = q2 data-score="3"> 不明</li>
+        </ul><br>
+        <label>石垣の勾配</label>
+        <ul>
+            <li><input type="radio" name = q3 data-score="2"> 高さ２ｍ未満 かつ勾配８５°以上</li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ２ｍ未満 かつ勾配８５°以下</li>
+            <li><input type="radio" name = q3 data-score="2"> 高さ２ｍ以上４ｍ未満 かつ勾配８５°以下</li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ２ｍ以上４ｍ未満 かつ勾配８０°以下</li>
+            <li><input type="radio" name = q3 data-score="2"> 高さ４ｍ以上６ｍ未満 かつ勾配８５°以下</li>
+            <li><input type="radio" name = q3 data-score="1"> 高さ４ｍ以上６ｍ未満 かつ勾配７３°以下 </li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ４ｍ以上６ｍ未満 かつ勾配７０°以下</li>
+            <li><input type="radio" name = q3 data-score="2"> 高さ６ｍ以上１０ｍ未満 かつ勾配８０°以下 </li>
+            <li><input type="radio" name = q3 data-score="1"> 高さ６ｍ以上１０ｍ未満 かつ勾配７０°以下</li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ６ｍ以上１０ｍ未満 かつ勾配６５°以下</li>
+            <li><input type="radio" name = q3 data-score="2"> 高さ１０ｍ以上１６ｍ未満 かつ勾配７５°以下</li>
+            <li><input type="radio" name = q3 data-score="1"> 高さ１０ｍ以上１６ｍ未満 かつ勾配７０°以下</li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ１０ｍ以上１６ｍ未満 かつ勾配６５°以下 </li>
+            <li><input type="radio" name = q3 data-score="2"> 高さ１６ｍ以上 かつ勾配７５°以下</li>
+            <li><input type="radio" name = q3 data-score="1"> 高さ１６ｍ以上 かつ勾配６５°以下</li>
+            <li><input type="radio" name = q3 data-score="0"> 高さ１６ｍ以上 かつ勾配６０°以下 </li>
+            <li><input type="radio" name = q3 data-score="3"> 上記以外</li>
+        </ul><br>
+        <label>過去の履歴</label><br>
+        <label>被災・修復履歴</label><br>
+        <ul>
+            <li><input type="radio" name = q4 data-score="0"> 崩れたり変状した記録はない。</li>
+            <li><input type="radio" name = q4 data-score="3"> ２回以上崩れた記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="2"> １回崩れた記録・痕跡ある。</li>
+            <li><input type="radio" name = q4 data-score="2"> ２回以上変状した記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="1"> １回変状した記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="3"> 程度は不明だが、２回以上被災した記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="2"> 程度は不明だが、１回被災した記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="3"> ２回以上積み直しを伴う修理を行った記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="2"> １回積み直しを伴う修理を行った記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="1"> 積み直しを伴わない修理を行った記録・痕跡がある。</li>
+            <li><input type="radio" name = q4 data-score="2"> 不明。</li>
+        </ul><br>
+        <label>修理の方法</label><br>
+        <ul><li><input type="radio" name = q5 data-score="0"> 修理にあたり特段の対策はしていない。</li>
+            <li><input type="radio" name = q5 data-score="-1"> 修理にあたり原因の分析と伝統工法の範囲で改善が図られた。</li>
+            <li><input type="radio" name = q5 data-score="-2"> 修理にあたり原因の分析と具体的な改良工法がとられた（土壌改良、栗石の粒度改良など、を除く）。</li>
+            <li><input type="radio" name = q5 data-score="-3"> 修理にあたり原因の分析と構造解析を行い、必要性能を概ね満たす改良、補強を行った。</li>
+            <li><input type="radio" name = q5 data-score="-1"> 修理にあたり在来仕様にこだわらず現代的な手法を用いて対策がなされた。 </li>
+            <li><input type="radio" name = q5 data-score="0"> 不明。</li>
+        </ul><br>
+        <label>築石の変状</label><br>
+        <label>緩み、築石の目地の開き</label><br>
+        <ul>
+            <li><input type="radio" name = q6 data-score="0"> 見られない。</li>
+            <li><input type="radio" name = q6 data-score="1"> 若干の緩み、築石の目地の開きがある。</li>
+            <li><input type="radio" name = q6 data-score="2"> 緩み、築石の目地の開きが随所に見られる。</li>
+            <li><input type="radio" name = q6 data-score="4"> 緩み、築石の目地の開きが著しい。</li>
+        </ul><br>
+        
+        <label>孕み</label><br>
+        <ul>
+            <li><input type="radio" name = q7 data-score="0"> 見られない。</li>
+            <li><input type="radio" name = q7 data-score="1"> わずかに孕みがある。</li>
+            <li><input type="radio" name = q7 data-score="2"> 孕みがある（孕みだし指数６未満）。 </li>
+            <li><input type="radio" name = q7 data-score="4"> 局所的な孕みが著しい （孕みだし指数６以上）。</li>
+            <li><input type="radio" name = q7 data-score="4"> 全体的な孕みが見られる。</li>
+        </ul><br>
+        <label>割れ、抜け落ち、崩れ</label>
+        <ul>
+            <li><input type="radio" name = q8 data-score="0"> 見られない。</li>
+            <li><input type="radio" name = q8 data-score="1"> 築石、角石の割れ、間詰石の抜け落ちが若干見られる。</li>
+            <li><input type="radio" name = q8 data-score="2"> 築石、角石の割れ、間詰石の抜け落ちが随所で見られる。</li>
+            <li><input type="radio" name = q8 data-score="4"> 築石、角石の割れ、間詰石の抜け落ち、築石の崩れが著しい。</li>
+        </ul><br>
+        <label>周辺の変状</label><br>
+        <label>天端または栗石部の沈下、地割れ </label>
+        <ul>
+            <li><input type="radio" name = q9 data-score="0"> 見られない。</li>
+            <li><input type="radio" name = q9 data-score="1"> 天端または栗石部の沈下が見られる。 </li>
+            <li><input type="radio" name = q9 data-score="3"> 天端周辺に地割れがある、地割れが入ったことがある。</li>
+        </ul><br>
+        <label>基礎部の変状</label>
+        <ul>
+            <li><input type="radio" name = q10 data-score="0"> 見られない。</li>
+            <li><input type="radio" name = q10 data-score="3"> 基礎部の変状が見られる。</li>
+        </ul><br>
+        <label>変状の進行状況</label>
+        <ul>
+            <li><input type="radio" name = q11 data-score="0"> 変状がほぼない</li>
+            <li><input type="radio" name = q11 data-score="0"> 変状があり観測を行っており、変化が無い。</li>
+            <li><input type="radio" name = q11 data-score="1"> 変状があり観測を行っていないが、目視で大きな変化が無い。 </li>
+            <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っており、変状が進行している。 </li>
+            <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っていないが、明らかに変状が進行している。 </li>
+        </ul><br>
+        <label>湧水</label>
+        <ul>
+            <li><input type="radio" name = q12 data-score="0"> 表面が乾いている。</li>
+            <li><input type="radio" name = q12 data-score="1"> 水がしみ出す/草が生えている。</li>
+            <li><input type="radio" name = q12 data-score="3"> 水が流れ出している。</li>
+        </ul><br>
 
 
-            <input type="submit" value="送信する" id="sousin"></input>
-        </form>
+        <input type="button" value="診断する" id="sousin"></input>
         <script src="sindan.js"></script>
     </body>
 </html>
-
