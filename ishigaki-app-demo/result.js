@@ -15,23 +15,23 @@ const kisototal = document.getElementById('kisototal');
 const henjototal = document.getElementById('henjototal'); 
 const goukei = document.getElementById('total');
 
-const jibanq1 = localStorage.getItem('q1data');
-const ishigakitypeq2 = localStorage.getItem('q2data');
-const koubaiq3 = localStorage.getItem('q3data');
-const hisaiq4 = localStorage.getItem('q4data');
-const shuriq5 = localStorage.getItem('q5data');
-const yurumiq6 = localStorage.getItem('q6data');
-const haramiq7 = localStorage.getItem('q7data');
-const wareq8 = localStorage.getItem('q8data');
-const tinkaq9 = localStorage.getItem('q9data');
-const kisobuq10 = localStorage.getItem('q10data');
-const shinkouq11 = localStorage.getItem('q11data');
-const wakimizuq12 = localStorage.getItem('q12data');
+const jibanq1 = sessionStorage.getItem('q1data');
+const ishigakitypeq2 = sessionStorage.getItem('q2data');
+const koubaiq3 = sessionStorage.getItem('q3data');
+const hisaiq4 = sessionStorage.getItem('q4data');
+const shuriq5 = sessionStorage.getItem('q5data');
+const yurumiq6 = sessionStorage.getItem('q6data');
+const haramiq7 = sessionStorage.getItem('q7data');
+const wareq8 = sessionStorage.getItem('q8data');
+const tinkaq9 = sessionStorage.getItem('q9data');
+const kisobuq10 = sessionStorage.getItem('q10data');
+const shinkouq11 = sessionStorage.getItem('q11data');
+const wakimizuq12 = sessionStorage.getItem('q12data');
 
 
-const goukeiqq = localStorage.getItem('totaldata');
-const kisoqq = localStorage.getItem('kisodata');
-const henjoqq = localStorage.getItem('henjodata');
+const goukeiqq = sessionStorage.getItem('totaldata');
+const kisoqq = sessionStorage.getItem('kisodata');
+const henjoqq = sessionStorage.getItem('henjodata');
 
 
 jiban.textContent = "地盤:" + jibanq1;

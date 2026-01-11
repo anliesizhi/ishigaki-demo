@@ -20,7 +20,7 @@ let henjo = 0;
 let total =0;
 let nownumber = 0;
 let score= []; 
-localStorage.removeItem('q1data');
+sessionStorage.removeItem('q1data');
 
 
 sousin.addEventListener('click',(e) =>{
@@ -46,22 +46,22 @@ sousin.addEventListener('click',(e) =>{
     
     
     
-    localStorage.setItem('q1data',String(score[0]));
-    localStorage.setItem('q2data',String(score[1]));
-    localStorage.setItem('q3data',String(score[2]));
-    localStorage.setItem('q4data',String(score[3]));
-    localStorage.setItem('q5data',String(score[4]));
-    localStorage.setItem('q6data',String(score[5]));
-    localStorage.setItem('q7data',String(score[6]));
-    localStorage.setItem('q8data',String(score[7]));
-    localStorage.setItem('q9data',String(score[8]));
-    localStorage.setItem('q10data',String(score[9]));
-    localStorage.setItem('q11data',String(score[10]));
-    localStorage.setItem('q12data',String(score[11]));
+    sessionStorage.setItem('q1data',String(score[0]));
+    sessionStorage.setItem('q2data',String(score[1]));
+    sessionStorage.setItem('q3data',String(score[2]));
+    sessionStorage.setItem('q4data',String(score[3]));
+    sessionStorage.setItem('q5data',String(score[4]));
+    sessionStorage.setItem('q6data',String(score[5]));
+    sessionStorage.setItem('q7data',String(score[6]));
+    sessionStorage.setItem('q8data',String(score[7]));
+    sessionStorage.setItem('q9data',String(score[8]));
+    sessionStorage.setItem('q10data',String(score[9]));
+    sessionStorage.setItem('q11data',String(score[10]));
+    sessionStorage.setItem('q12data',String(score[11]));
 
-    localStorage.setItem('totaldata',String(total));
-    localStorage.setItem('kisodata',String(kiso));
-    localStorage.setItem('henjodata',String(henjo));
+    sessionStorage.setItem('totaldata',String(total));
+    sessionStorage.setItem('kisodata',String(kiso));
+    sessionStorage.setItem('henjodata',String(henjo));
 
 
 
