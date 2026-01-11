@@ -129,6 +129,9 @@ ul button{
 #modoru a{
   color: white;
 }
+header {
+  background-color: black;
+}
 
 @media (max-width: 600px) {
   body {
@@ -160,7 +163,7 @@ ul button{
   max-width: 100%;  /* 画面からはみ出さないように */
   height: auto;     /* 縦横比を保ったまま縮める */
   margin: 0 auto 20px;  /* 中央に配置＋下に少し余白 */
-}
+  }
 }
 
 
