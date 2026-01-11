@@ -160,7 +160,9 @@ li button{
   padding-left: 3px;
   font-size: 35px;
   background-color: rgb(38, 38, 38);
-  color: rgb(255, 255, 255);
+}
+#modoru a{
+  color: white;
 }
 @media (max-width: 600px) {
   body {
