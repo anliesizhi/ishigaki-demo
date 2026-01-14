@@ -175,6 +175,9 @@ header {
   .middle{
     padding: 0 8px;           /* 画面端に少しだけ余白 */
   }
+  header {
+    background-color: rgb(38, 38, 38);
+  }
 
   h1 {
     font-size: 20px;
@@ -202,6 +205,7 @@ header {
   margin: 0 auto 20px;  /* 中央に配置＋下に少し余白 */
   }
 }
+
 
 
 
