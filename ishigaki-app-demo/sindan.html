@@ -376,31 +376,68 @@
                 </div>
             </div>
 
-            <!-- ここから未修正 -->
-            <label>c. 過去の履歴</label><br>
-            <label>ア 被災・修理履歴</label>
-            <ul>
-                <li><input type="radio" name = kisoten_q3_1 data-score="0"> 崩れたり変状した記録はない。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="3"> ２回以上崩れた記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="2"> １回崩れた記録・痕跡ある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="2"> ２回以上変状した記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="1"> １回変状した記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="3"> 程度は不明だが、２回以上被災した記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="2"> 程度は不明だが、１回被災した記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="3"> ２回以上積み直しを伴う修理を行った記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="2"> １回積み直しを伴う修理を行った記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="1"> 積み直しを伴わない修理を行った記録・痕跡がある。</li>
-                <li><input type="radio" name = kisoten_q3_1 data-score="2"> 不明。</li>
-            </ul>
-            <label>イ 修理の方法</label>
-            <ul><li><input type="radio" name = kisoten_q3_2 data-score="0"> 修理にあたり特段の対策はしていない。</li>
-                <li><input type="radio" name = kisoten_q3_2 data-score="-1"> 修理にあたり原因の分析と伝統工法の範囲で改善が図られた。</li>
-                <li><input type="radio" name = kisoten_q3_2 data-score="-2"> 修理にあたり原因の分析と具体的な改良工法がとられた（土壌改良、栗石の粒度改良など、を除く）。</li>
-                <li><input type="radio" name = kisoten_q3_2 data-score="-3"> 修理にあたり原因の分析と構造解析を行い、必要性能を概ね満たす改良、補強を行った。</li>
-                <li><input type="radio" name = kisoten_q3_2 data-score="-1"> 修理にあたり在来仕様にこだわらず現代的な手法を用いて対策がなされた。 </li>
-                <li><input type="radio" name = kisoten_q3_2 data-score="0"> 不明。</li>
-            </ul>
-            <!-- ここまで未修正 -->
+            <div class="sublist-group">
+            <div class="sublist-title"><label>c. 過去の履歴</label></div>
+            <div class="btn-group">
+            <div class="item-title"><label>ア 被災・修理履歴</label></div>
+
+                <input type="radio" name = kisoten_q3_1  id="kisoten_q3_1_choice1" data-score="0">
+                <label for="kisoten_q3_1_choice1" class="select-btn">①崩れたり変状した記録はない。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice2" data-score="3"> 
+                <label for="kisoten_q3_1_choice2" class="select-btn">②２回以上崩れた記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice3" data-score="2"> 
+                <label for="kisoten_q3_1_choice3" class="select-btn">③１回崩れた記録・痕跡ある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice4" data-score="2"> 
+                <label for="kisoten_q3_1_choice4" class="select-btn">④２回以上変状した記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice5" data-score="1"> 
+                <label for="kisoten_q3_1_choice5" class="select-btn">⑤１回変状した記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice6" data-score="3"> 
+                <label for="kisoten_q3_1_choice6" class="select-btn">⑥程度は不明だが、２回以上被災した記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice7" data-score="2">
+                <label for="kisoten_q3_1_choice7" class="select-btn">⑦ 程度は不明だが、１回被災した記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice8" data-score="3"> 
+                <label for="kisoten_q3_1_choice8" class="select-btn">⑧２回以上積み直しを伴う修理を行った記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice9" data-score="2">
+                <label for="kisoten_q3_1_choice9" class="select-btn">⑨１回積み直しを伴う修理を行った記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice10" data-score="1">
+                <label for="kisoten_q3_1_choice10" class="select-btn">⑩ 積み直しを伴わない修理を行った記録・痕跡がある。</label>
+
+                <input type="radio" name = kisoten_q3_1 id="kisoten_q3_1_choice11" data-score="2"> 
+                <label for="kisoten_q3_1_choice11" class="select-btn">⑪不明。</label>
+            </div>
+
+            <div class="btn-group">
+            <div class="item-title"><label>イ 修理の方法</label></div>
+
+                <input type="radio" name = kisoten_q3_2  id="kisoten_q3_2_choice1" data-score="0">
+                <label for="kisoten_q3_2_choice1" class="select-btn">① 修理にあたり特段の対策はしていない。</label>
+
+                <input type="radio" name = kisoten_q3_2 id="kisoten_q3_2_choice2" data-score="-1">
+                <label for="kisoten_q3_2_choice2" class="select-btn">② 修理にあたり原因の分析と伝統工法の範囲で改善が図られた。</label>
+
+                <input type="radio" name = kisoten_q3_2 id="kisoten_q3_2_choice3" data-score="-2"> 
+                <label for="kisoten_q3_2_choice3" class="select-btn">③ 修理にあたり原因の分析と具体的な改良工法がとられた（土壌改良、栗石の粒度改良など、を除く）。</label>
+
+                <input type="radio" name = kisoten_q3_2 id="kisoten_q3_2_choice4" data-score="-3">
+                <label for="kisoten_q3_2_choice4" class="select-btn">④ 修理にあたり原因の分析と構造解析を行い、必要性能を概ね満たす改良、補強を行った。</label>
+
+                <input type="radio" name = kisoten_q3_2 id="kisoten_q3_2_choice5" data-score="-1"> 
+                <label for="kisoten_q3_2_choice5" class="select-btn">⑤ 修理にあたり在来仕様にこだわらず現代的な手法を用いて対策がなされた。</label>
+
+                <input type="radio" name = kisoten_q3_2 id="kisoten_q3_2_choice6" data-score="0"> 
+                <label for="kisoten_q3_2_choice6" class="select-btn">⑥ 不明。</label>
+            </div>
+            </div>
+            </div>
 
         </div>
 
@@ -468,42 +505,69 @@
                     <label for="henjoten_q1_3_choice4" class="select-btn">④ 築石、角石の割れ、間詰石の抜け落ち、築石の崩れが著しい。</label>
                 </div>
             </div>
+            <div class="sublist-group">
+            <div class="sublist-title"><label>b. 周辺の変状</label></div>
+            <div class="btn-group">
+            <div class="item-title"><label>ア 天端または栗石部の沈下、地割れ </label></div>
+            
+                <input type="radio" name ="henjoten_q2_1" id="henjoten_q2_1_choice1" data-score="0">
+                <label for="henjoten_q2_1_choice1" id="henjoten_q1_4_choice1" class="select-btn"> ① 見られない。</label>
 
-            <!-- ここから未修正 -->
-            <label>割れ、抜け落ち、崩れ</label>
-            <ul>
-                <li><input type="radio" name = q8 data-score="0"> 見られない。</li>
-                <li><input type="radio" name = q8 data-score="1"> 築石、角石の割れ、間詰石の抜け落ちが若干見られる。</li>
-                <li><input type="radio" name = q8 data-score="2"> 築石、角石の割れ、間詰石の抜け落ちが随所で見られる。</li>
-                <li><input type="radio" name = q8 data-score="4"> 築石、角石の割れ、間詰石の抜け落ち、築石の崩れが著しい。</li>
-            </ul><br>
-            <label>周辺の変状</label><br>
-            <label>天端または栗石部の沈下、地割れ </label>
-            <ul>
-                <li><input type="radio" name = q9 data-score="0"> 見られない。</li>
-                <li><input type="radio" name = q9 data-score="1"> 天端または栗石部の沈下が見られる。 </li>
-                <li><input type="radio" name = q9 data-score="3"> 天端周辺に地割れがある、地割れが入ったことがある。</li>
-            </ul><br>
-            <label>基礎部の変状</label>
-            <ul>
-                <li><input type="radio" name = q10 data-score="0"> 見られない。</li>
-                <li><input type="radio" name = q10 data-score="3"> 基礎部の変状が見られる。</li>
-            </ul><br>
-            <label>変状の進行状況</label>
-            <ul>
-                <li><input type="radio" name = q11 data-score="0"> 変状がほぼない</li>
-                <li><input type="radio" name = q11 data-score="0"> 変状があり観測を行っており、変化が無い。</li>
-                <li><input type="radio" name = q11 data-score="1"> 変状があり観測を行っていないが、目視で大きな変化が無い。 </li>
-                <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っており、変状が進行している。 </li>
-                <li><input type="radio" name = q11 data-score="4"> 変状があり観測を行っていないが、明らかに変状が進行している。 </li>
-            </ul><br>
-            <label>湧水</label>
-            <ul>
-                <li><input type="radio" name = q12 data-score="0"> 表面が乾いている。</li>
-                <li><input type="radio" name = q12 data-score="1"> 水がしみ出す/草が生えている。</li>
-                <li><input type="radio" name = q12 data-score="3"> 水が流れ出している。</li>
-            </ul><br>
-            <!-- ここまで未修正 -->
+                <input type="radio" name ="henjoten_q2_1" id="henjoten_q2_1_choice2" data-score="1">
+                <label for="henjoten_q2_1_choice2" class="select-btn"> ② 天端または栗石部の沈下が見られる。 </label>
+
+                <input type="radio" name ="henjoten_q2_1" id="henjoten_q2_1_choice3" data-score="3">
+                <label for="henjoten_q2_1_choice3" class="select-btn"> ③ 天端周辺に地割れがある、地割れが入ったことがある。</label>
+
+            </div>
+
+             <div class="btn-group">
+            <div class="item-title"><label>イ 基礎部の変状</label></div>
+            
+                <input type="radio" name ="henjoten_q2_2" id="henjoten_q2_2_choice1" data-score="0">
+                <label for="henjoten_q2_2_choice1" class="select-btn"> ① 見られない。</label>
+
+                <input type="radio" name ="henjoten_q2_2" id="henjoten_q2_2_choice2" data-score="3">
+                <label for="henjoten_q2_2_choice2"  class="select-btn"> ② 基礎部の変状が見られる。</label>
+
+            </div>
+            </div>
+            
+            <div class="btn-group">
+            <div class="item-title"><label>c. 変状の進行状況</label></div>
+            
+                <input type="radio" name ="henjoten_q3"  id="henjoten_q3_choice1" data-score="0">
+                <label for="henjoten_q3_choice1" class="select-btn"> ① 変状がほぼない</label>
+
+                <input type="radio" name ="henjoten_q3" id="henjoten_q3_choice2"  data-score="0">
+                <label for="henjoten_q3_choice2" class="select-btn"> ② 変状があり観測を行っており、変化が無い。</label>
+
+                <input type="radio" name ="henjoten_q3"  id="henjoten_q3_choice3" data-score="1"> 
+                <label for="henjoten_q3_choice3" class="select-btn"> ③ 変状があり観測を行っていないが、目視で大きな変化が無い。</label>
+
+                <input type="radio" name ="henjoten_q3"  id="henjoten_q3_choice4" data-score="4">
+                <label for="henjoten_q3_choice4" class="select-btn"> ④ 変状があり観測を行っており、変状が進行している。 </label>
+
+                <input type="radio" name ="henjoten_q3"  id="henjoten_q3_choice5" data-score="4">
+                <label for="henjoten_q3_choice5" class="select-btn"> ⑤ 変状があり観測を行っていないが、明らかに変状が進行している。 </label>
+                </div>
+            
+            
+            <div class="btn-group">
+            <div class="item-title"><label>d. 湧水</label></div>
+            
+                <input type="radio" name ="henjoten_q4"  id="henjoten_q4_choice1" data-score="0">
+                <label for="henjoten_q4_choice1" class="select-btn"> ① 表面が乾いている。</label>
+
+                <input type="radio" name ="henjoten_q4"  id="henjoten_q4_choice2" data-score="1">
+                <label for="henjoten_q4_choice2" class="select-btn"> ② 水がしみ出す/草が生えている。</label>
+
+                <input type="radio" name ="henjoten_q4"  id="henjoten_q4_choice3" data-score="3">
+                <label for="henjoten_q4_choice3" class="select-btn"> ③ 水が流れ出している。</label>
+
+            
+                
+               </div> 
 
         </div>
 
@@ -511,3 +575,5 @@
         <script src="sindan.js"></script>
     </body>
 </html>
+
+
