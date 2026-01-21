@@ -78,11 +78,10 @@ function kisotenData() {
     const q1   = getCheckedRadio("kisoten_q1");
     const q2_1 = getCheckedRadio("kisoten_q2_1");
     const q2_2 = getCheckedRadio("kisoten_q2_2");
-//    const q3_1 = getCheckedRadio("kisoten_q3_1");
-//    const q3_2 = getCheckedRadio("kisoten_q3_2");
+    const q3_1 = getCheckedRadio("kisoten_q3_1");
+    const q3_2 = getCheckedRadio("kisoten_q3_2");
 
-    if (!q1 || !q2_1 || !q2_2) {
-//    if (!q1 || !q2_1 || !q2_2 || !q3_1 || !q3_2) {
+    if (!q1 || !q2_1 || !q2_2 || !q3_1 || !q3_2) {
         return;
     }
 
@@ -90,8 +89,8 @@ function kisotenData() {
     const kisoten_q1   = buildAnswer(q1);
     const kisoten_q2_1 = buildAnswer(q2_1);
     const kisoten_q2_2 = buildAnswer(q2_2);
-//    const kisoten_q3_1 = buildAnswer(q3_1);
-//    const kisoten_q3_2 = buildAnswer(q3_2);
+    const kisoten_q3_1 = buildAnswer(q3_1);
+    const kisoten_q3_2 = buildAnswer(q3_2);
 
     // items配列の中身
     const item = {
@@ -101,8 +100,8 @@ function kisotenData() {
             { "イ 石垣の高さ、勾配": kisoten_q2_2 }
         ],
         "c. 過去の履歴": [
-            { "ア 被災・修理履歴 ": "" },
-            { "イ 修理の方法": "" }
+            { "ア 被災・修理履歴 ": kisoten_q3_1 },
+            { "イ 修理の方法": kisoten_q3_2 }
         ]
     };
 
@@ -111,8 +110,8 @@ function kisotenData() {
       kisoten_q1.point +
       kisoten_q2_1.point +
       kisoten_q2_2.point;
-//      kisoten_q3_1.point +
-//      kisoten_q3_2.point;
+      kisoten_q3_1.point +
+      kisoten_q3_2.point;
 
     // 最終保存オブジェクト
     return {
@@ -126,13 +125,13 @@ function henjotenData() {
     const q1_1 = getCheckedRadio("henjoten_q1_1");
     const q1_2 = getCheckedRadio("henjoten_q1_2");
     const q1_3 = getCheckedRadio("henjoten_q1_3");
-//    const q2_1 = getCheckedRadio("henjoten_q2_1");
-//    const q2_2 = getCheckedRadio("henjoten_q2_2");
-//    const q3   = getCheckedRadio("henjoten_q3");
-//    const q4   = getCheckedRadio("henjoten_q4");
+    const q2_1 = getCheckedRadio("henjoten_q2_1");
+    const q2_2 = getCheckedRadio("henjoten_q2_2");
+    const q3   = getCheckedRadio("henjoten_q3");
+    const q4   = getCheckedRadio("henjoten_q4");
 
-    if (!q1_1 || !q1_2 || !q1_3) {
-//    if (!q1_1 || !q1_2 || !q1_3 || !q2_1 || !q2_2 || !q3 || !q4) {
+    
+    if (!q1_1 || !q1_2 || !q1_3 || !q2_1 || !q2_2 || !q3 || !q4) {
         return;
     }
 
@@ -140,10 +139,10 @@ function henjotenData() {
     const henjoten_q1_1 = buildAnswer(q1_1);
     const henjoten_q1_2 = buildAnswer(q1_2);
     const henjoten_q1_3 = buildAnswer(q1_3);
-//    const henjoten_q2_1 = buildAnswer(q2_1);
-//    const henjoten_q2_2 = buildAnswer(q2_2);
-//    const henjoten_q3   = buildAnswer(q3);
-//    const henjoten_q4   = buildAnswer(q4);
+    const henjoten_q2_1 = buildAnswer(q2_1);
+    const henjoten_q2_2 = buildAnswer(q2_2);
+    const henjoten_q3   = buildAnswer(q3);
+    const henjoten_q4   = buildAnswer(q4);
   
     // items配列の中身
     const item = {
@@ -153,11 +152,11 @@ function henjotenData() {
             { "ウ 割れ、抜け落ち、崩れ": henjoten_q1_3 }
         ],
         "b. 周辺の変状 ": [
-            { "ア 天端または栗石部の沈下、地割れ": "" },
-            { "イ 基礎部の変状": "" }
+            { "ア 天端または栗石部の沈下、地割れ": henjoten_q2_1 },
+            { "イ 基礎部の変状": henjoten_q2_2 }
         ],
-        "c. 変状の進行状況": {},
-        "d. 湧水": {}
+        "c. 変状の進行状況": henjoten_q3,
+        "d. 湧水": henjoten_q4
     };
 
     // point合計を算出
@@ -165,20 +164,20 @@ function henjotenData() {
         henjoten_q1_1.point +
         henjoten_q1_2.point +
         henjoten_q1_3.point;
-//        henjoten_q2_1.point +
-//        henjoten_q2_1.point +
-//        henjoten_q3.point +
-//        henjoten_q4.point;
+        henjoten_q2_1.point +
+        henjoten_q2_2.point +
+        henjoten_q3.point +
+        henjoten_q4.point;
 
     // 4点項目ありなし
     const values = [
         henjoten_q1_1.point,
         henjoten_q1_2.point,
-        henjoten_q1_3.point
-//        henjoten_q2_1.point,
-//        henjoten_q2_2.point,
-//        henjoten_q3.point,
-//        henjoten_q4.point
+        henjoten_q1_3.point,
+        henjoten_q2_1.point,
+        henjoten_q2_2.point,
+        henjoten_q3.point,
+        henjoten_q4.point
     ];
     const hasFourOrMore = values.some(v => v >= 4);
 
@@ -274,3 +273,4 @@ function kihonjohoData() {
         "改修の履歴": { "text": kaishuSaved }
     };
 }
+
