@@ -229,6 +229,13 @@ h1{
   width: auto;
   white-space: normal;
 }
+/*真ん中のほうが見やすいかと思ったので寄せました*/
+#center{
+  margin-left: auto;
+  margin-right: auto;
+  
+
+}
 
 /* モバイルで表が崩れにくいように */
 @media (max-width: 640px){
