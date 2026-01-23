@@ -234,7 +234,32 @@ h1{
   margin-left: auto;
   margin-right: auto;
 }
+/* PDF出力用 */
+.pdf-export, .pdf-export * {
+  color: #000 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+  filter: none !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
 
+.pdf-export .resultTable,
+.pdf-export .resultTable th,
+.pdf-export .resultTable td {
+  border: 2px solid #000 !important;
+}
+
+.pdf-export .resultTable th {
+  background: #fff !important;
+  font-weight: 800 !important;
+}
+
+.pdf-export .groupTitle,
+.pdf-export .tableTitle {
+  color: #000 !important;
+  font-weight: 900 !important;
+}
 /* モバイルで表が崩れにくいように */
 @media (max-width: 640px){
   body{ padding-top: 64px; } /* 固定の戻るボタン分 */
