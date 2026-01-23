@@ -205,3 +205,52 @@ function kihonjohoTable(tableArea, sessionStrageKey) {
   area.innerHTML = "";
   area.appendChild(table);
 }
+
+// pdfをダウンロードしようとしたのですがうまくできなかったので教えてほしいです
+// pdf,excelでダウンロードできるようにする
+ const thepdf = document.getElementById('thepdf');
+ const excel = document.getElementById('excel');
+
+
+ thepdf.addEventListener("click", async () => {
+    
+    const pdfarea = document.getElementById("pdfarea");
+    pdfarea.classList.add("pdf-export");
+
+  const canvas = await html2canvas(pdfarea, {
+    scale: 2,
+    backgroundColor: "#ffffff",
+  });
+
+  pdfarea.classList.remove("pdf-export");
+
+  const imgData = canvas.toDataURL("image/png");
+
+
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF("p", "mm", "a4");
+
+  const pdfWidth = pdf.internal.pageSize.getWidth();      // A4の横幅(mm)
+  const pageHeight = pdf.internal.pageSize.getHeight();   // A4の高さ(mm)
+
+  // 画像をPDF幅に合わせたときの画像の高さ(mm)
+  const imgHeight = (canvas.height * pdfWidth) / canvas.width;
+
+  // 1ページ目
+  let heightLeft = imgHeight;
+  let position = 0;
+
+  pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
+  heightLeft -= pageHeight;
+
+  // 2ページ目以降
+  while (heightLeft > 0) {
+    position -= pageHeight;   
+    pdf.addPage();
+    pdf.addImage(imgData, "PNG", 0, position, pdfWidth, imgHeight);
+    heightLeft -= pageHeight;
+  }
+
+  pdf.save("ishigaki_capture.pdf");
+ });
+
