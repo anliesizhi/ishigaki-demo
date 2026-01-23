@@ -206,10 +206,10 @@ function kihonjohoTable(tableArea, sessionStrageKey) {
   area.appendChild(table);
 }
 
-// pdfをダウンロードしようとしたのですがうまくできなかったので教えてほしいです
-// pdf,excelでダウンロードできるようにする
+// pdfをダウンロードしようとしたのですがうまくできなかったので教えてほしいです。一応できはします。
+// pdfでダウンロードできるようにする
  const thepdf = document.getElementById('thepdf');
- const excel = document.getElementById('excel');
+ 
 
 
  thepdf.addEventListener("click", async () => {
@@ -253,4 +253,5 @@ function kihonjohoTable(tableArea, sessionStrageKey) {
 
   pdf.save("ishigaki_capture.pdf");
  });
+
 
