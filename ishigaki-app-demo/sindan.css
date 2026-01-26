@@ -393,5 +393,5 @@ li{
 @media (max-width: 520px){
   fieldset{ padding: 12px; }
   .select-btn{ padding: 12px 10px; }
-  input[type="text"], input[type="number"], textarea{ width: min(100%); }
+  input[type="text"], input[type="number"], textarea{ width: min(20%); }
 }
