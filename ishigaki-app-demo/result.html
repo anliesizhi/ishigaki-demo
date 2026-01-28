@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8">
         <title>石垣サイト</title>
-        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="discription" content="">
         <link rel="stylesheet" href="result.css">
+        <link rel="icon" href="data:,">
     </head>
     <body>
 
@@ -14,28 +15,24 @@
         <button id="thepdf">PDFでダウンロード</button>
 
         <!-- ここにJSで表を挿入します -->
-         <div id="pdfarea">
-        <div class="groupTitle center">＜基本情報＞</div>
-        <div id="kihonArea"></div>
+        <div id="pdfarea">
+            <div class="groupTitle center">＜基本情報＞</div>
+            <div id="kihonArea"></div>
 
-        <div class="groupTitle center">＜予備診断＞</div>
-        <div  class="tableTitle center">１．基礎点項目</div>
-        <div id="kisotenArea"></div>
+            <div class="groupTitle center">＜予備診断＞</div>
+            <div class="tableTitle center">１．基礎点項目</div>
+            <div id="kisotenArea"></div>
 
-        <div  class="tableTitle center">２．変状点項目</div>
-        <div id="henjotenArea"></div>
+            <div class="tableTitle center">２．変状点項目</div>
+            <div id="henjotenArea"></div>
 
-        <div  class="tableTitle center">３．判定</div>
-        <div id="hanteiArea"></div><br>
+            <div class="tableTitle center">３．判定</div>
+            <div id="hanteiArea"></div><br>
         </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script> -->
+        <script src="./libs/jspdf.umd.min.js"></script>
+        <script src="./libs/jspdf.plugin.autotable.min.js"></script>
         <script src="result.js"></script>
     </body>
-
-
-
-
-
-
+</html>

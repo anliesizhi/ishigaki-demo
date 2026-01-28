@@ -28,6 +28,20 @@ function buildAnswer(inputEl) {
 
 // 診断するボタン押下処理
 document.getElementById("sousin").addEventListener("click", () => {
+    // 必須チェック（石垣番号・地区名）
+    const ishigakiNo = document.getElementById("ishigakiNo")?.value.trim() ?? "";
+    const chikuName  = document.getElementById("chikuName")?.value.trim() ?? "";
+
+    if (!ishigakiNo || !chikuName) {
+    alert("「石垣番号」と「地区名」は必須です。入力してください。");
+
+    // 未入力の方へフォーカス
+    if (!ishigakiNo) document.getElementById("ishigakiNo")?.focus();
+    else document.getElementById("chikuName")?.focus();
+
+    return; // ★ここで処理中断（SessionStorage保存や画面遷移しない）
+    }
+
     // 基本情報
     const kihonjoho = kihonjohoData();
     sessionStorage.setItem("kihonjoho", JSON.stringify(kihonjoho));
@@ -273,5 +287,3 @@ function kihonjohoData() {
         "改修の履歴": { "text": kaishuSaved }
     };
 }
-
-
