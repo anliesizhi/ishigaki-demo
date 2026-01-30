@@ -234,6 +234,26 @@ h1{
   margin-left: auto;
   margin-right: auto;
 }
+/*pdfダウンロードボタン*/
+#thepdf{
+  font-size: 16px;
+  width: 180px;
+  height: 48px;
+  color: #fff;
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(255,255,255,.35);
+  border-radius: 999px;
+}
+/*ダウンロード中演出系*/
+.hide{
+  display: none;
+}
+#downloading{
+  margin-left: 8px;
+  font-size: 16px;
+  font-weight: 500; 
+}
+
 /* PDF出力用 */
 .pdf-export, .pdf-export * {
   color: #000 !important;
