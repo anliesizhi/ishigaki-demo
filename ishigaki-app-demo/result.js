@@ -254,10 +254,13 @@ thepdf.addEventListener("click", async () => {
   pdf.save("ishigaki_capture.pdf");
 });
 */
+const downloading = document.getElementById("downloading");
 
 // ===== PDF（テキストとして出力） =====
 const thepdf = document.getElementById("thepdf");
 thepdf.addEventListener("click", async () => {
+    //ダウンロード中を出す
+  downloading.classList.remove("hide");
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF("p", "mm", "a4");
 
@@ -560,6 +563,8 @@ const toDisplayValue = (v) => {
     `石垣予備診断結果_${safe(a || "未入力")}_${safe(b || "未入力")}.pdf`;
 
   pdf.save(fileName);
+    //ダウンロード中をかくす
+  downloading.classList.add("hide");
 });
 
 // ===== 日本語フォントを jsPDF に登録する =====
@@ -604,3 +609,4 @@ function ensureJapaneseFont(pdf) {
 
   return jpFontReady;
 }
+
