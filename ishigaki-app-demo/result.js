@@ -537,7 +537,7 @@ const toDisplayValue = (v) => {
   pdf.setFontSize(12);
   pdf.setFont("NotoSansJP", "bold");
   pdf.text("3．判定", 14, cursorY);
-  cursorY += 4;
+  cursorY += 6;
 
   pdf.setFontSize(11);
   pdf.setFont("NotoSansJP", "normal");
