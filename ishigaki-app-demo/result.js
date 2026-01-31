@@ -1,16 +1,25 @@
 // 画面ロード時
-document.addEventListener("DOMContentLoaded", () => {
-    // 基礎点項目
-    kihonjohoTable("kihonArea", "kihonjoho");
+document.addEventListener("DOMContentLoaded", async () => {
+  // 基礎点項目
+  kihonjohoTable("kihonArea", "kihonjoho");
 
-    // 基礎点項目
-    yobishindanTable("kisotenArea", "kisotenkomoku");
+  // 基礎点項目
+  yobishindanTable("kisotenArea", "kisotenkomoku");
 
-    // 変状点項目
-    yobishindanTable("henjotenArea", "henjotenkomoku");
+  // 変状点項目
+  yobishindanTable("henjotenArea", "henjotenkomoku");
 
-    // 判定
-    hanteiTable("hanteiArea", "hantei");
+  // 判定
+  hanteiTable("hanteiArea", "hantei");
+
+  // 日本語フォント読み込み
+  try {
+    await loadJapaneseFontDataOnce();
+  } catch (e) {
+    console.error(e);
+    // 必要ならUIに表示（任意）
+    // alert("日本語フォントの事前読み込みに失敗しました。");
+  }
 });
 
 // 予備診断結果のテーブル表示
@@ -578,7 +587,9 @@ thepdf.addEventListener("click", async () => {
 });
 
 // ===== 日本語フォントを jsPDF に登録する =====
-let jpFontReady = null;
+
+// フォントデータ（Base64）は一度だけ読み込んでキャッシュ
+let jpFontDataPromise = null;
 
 function arrayBufferToBase64(buffer) {
   let binary = "";
@@ -588,10 +599,10 @@ function arrayBufferToBase64(buffer) {
   return btoa(binary);
 }
 
-function ensureJapaneseFont(pdf) {
-  if (jpFontReady) return jpFontReady;
+async function loadJapaneseFontDataOnce() {
+  if (jpFontDataPromise) return jpFontDataPromise;
 
-  jpFontReady = (async () => {
+  jpFontDataPromise = (async () => {
     const [regRes, boldRes] = await Promise.all([
       fetch("./fonts/NotoSansJP-Regular.ttf"),
       fetch("./fonts/NotoSansJP-Bold.ttf"),
@@ -605,18 +616,33 @@ function ensureJapaneseFont(pdf) {
       boldRes.arrayBuffer(),
     ]);
 
-    const regBase64 = arrayBufferToBase64(regBuf);
-    const boldBase64 = arrayBufferToBase64(boldBuf);
-
-    // Regular
-    pdf.addFileToVFS("NotoSansJP-Regular.ttf", regBase64);
-    pdf.addFont("NotoSansJP-Regular.ttf", "NotoSansJP", "normal", "Identity-H");
-
-    // Bold（★これが重要）
-    pdf.addFileToVFS("NotoSansJP-Bold.ttf", boldBase64);
-    pdf.addFont("NotoSansJP-Bold.ttf", "NotoSansJP", "bold", "Identity-H");
+    return {
+      regBase64: arrayBufferToBase64(regBuf),
+      boldBase64: arrayBufferToBase64(boldBuf),
+    };
   })();
 
-  return jpFontReady;
+  return jpFontDataPromise;
 }
 
+// 「この pdf インスタンスに」フォントが登録されているか確認して、なければ登録
+function isFontRegistered(pdf, fontName, fontStyle) {
+  const list = pdf.getFontList?.() || {};
+  return !!(list[fontName] && list[fontName].includes(fontStyle));
+}
+
+async function ensureJapaneseFont(pdf) {
+  const { regBase64, boldBase64 } = await loadJapaneseFontDataOnce();
+
+  // normal
+  if (!isFontRegistered(pdf, "NotoSansJP", "normal")) {
+    pdf.addFileToVFS("NotoSansJP-Regular.ttf", regBase64);
+    pdf.addFont("NotoSansJP-Regular.ttf", "NotoSansJP", "normal", "Identity-H");
+  }
+
+  // bold
+  if (!isFontRegistered(pdf, "NotoSansJP", "bold")) {
+    pdf.addFileToVFS("NotoSansJP-Bold.ttf", boldBase64);
+    pdf.addFont("NotoSansJP-Bold.ttf", "NotoSansJP", "bold", "Identity-H");
+  }
+}
